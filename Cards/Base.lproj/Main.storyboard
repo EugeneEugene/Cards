@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,19 +20,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Tfs-qM-XeT" customClass="PlayingCardView" customModule="Cards" customModuleProvider="target">
-                                <rect key="frame" x="16" y="20" width="343" height="647"/>
+                                <rect key="frame" x="45" y="115.5" width="285" height="456"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Tfs-qM-XeT" secondAttribute="height" multiplier="5:8" id="KGr-eT-lsW"/>
+                                    <constraint firstAttribute="width" priority="750" constant="285" id="q76-oy-Xyk"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rank">
+                                        <integer key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Tfs-qM-XeT" secondAttribute="trailing" constant="16" id="8DL-md-f5E"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Tfs-qM-XeT" secondAttribute="bottom" id="Hb5-Wu-ijU"/>
-                            <constraint firstItem="Tfs-qM-XeT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="acu-O2-SRs"/>
-                            <constraint firstItem="Tfs-qM-XeT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="jXR-4d-9A1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Tfs-qM-XeT" secondAttribute="trailing" constant="16" id="8DL-md-f5E"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Tfs-qM-XeT" secondAttribute="bottom" constant="16" id="Hb5-Wu-ijU"/>
+                            <constraint firstItem="Tfs-qM-XeT" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Lc6-Zc-H87"/>
+                            <constraint firstItem="Tfs-qM-XeT" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="SKQ-Bl-24C"/>
+                            <constraint firstItem="Tfs-qM-XeT" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="acu-O2-SRs"/>
+                            <constraint firstItem="Tfs-qM-XeT" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="jXR-4d-9A1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="playingCardView" destination="Tfs-qM-XeT" id="BpC-Md-SW1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
